@@ -31,3 +31,11 @@ document.querySelectorAll('.skill-chip').forEach(chip=>chip.addEventListener('cl
 const qrModal=document.getElementById('qrModal');document.getElementById('qrTrigger').addEventListener('click',()=>{qrModal.classList.add('open');qrModal.setAttribute('aria-hidden','false')});
 document.querySelectorAll('.info-modal').forEach(m=>{m.querySelector('.info-close').onclick=()=>{m.classList.remove('open');m.setAttribute('aria-hidden','true')};m.addEventListener('click',e=>{if(e.target===m){m.classList.remove('open');m.setAttribute('aria-hidden','true')}})});
 document.addEventListener('keydown',e=>{if(e.key==='Escape')document.querySelectorAll('.info-modal.open').forEach(m=>m.classList.remove('open'))});
+
+// V5 portfolio experience
+window.addEventListener('load',()=>setTimeout(()=>document.getElementById('siteLoader')?.classList.add('done'),650));
+const cursorLight=document.getElementById('cursorLight');
+if(cursorLight) document.addEventListener('pointermove',e=>{cursorLight.style.left=e.clientX+'px';cursorLight.style.top=e.clientY+'px'});
+const backTop=document.getElementById('backTop');
+if(backTop){window.addEventListener('scroll',()=>backTop.classList.toggle('show',scrollY>700));backTop.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));}
+document.querySelectorAll('.download-ripple,.resume-download').forEach(btn=>btn.addEventListener('click',()=>{btn.classList.add('downloaded');setTimeout(()=>btn.classList.remove('downloaded'),900)}));
