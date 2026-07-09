@@ -44,3 +44,13 @@ if(cursorLight) document.addEventListener('pointermove',e=>{cursorLight.style.le
 const backTop=document.getElementById('backTop');
 if(backTop){window.addEventListener('scroll',()=>backTop.classList.toggle('show',scrollY>700));backTop.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));}
 document.querySelectorAll('.download-ripple,.resume-download').forEach(btn=>btn.addEventListener('click',()=>{btn.classList.add('downloaded');setTimeout(()=>btn.classList.remove('downloaded'),900)}));
+
+// V5.1 opportunity thought modal
+const opportunityModal=document.getElementById('opportunityModal');
+const opportunityTrigger=document.getElementById('opportunityTrigger');
+if(opportunityModal&&opportunityTrigger){
+  opportunityTrigger.addEventListener('click',()=>{
+    opportunityModal.classList.add('open');
+    opportunityModal.setAttribute('aria-hidden','false');
+  });
+}
