@@ -7,3 +7,46 @@
 .four-years{margin-top:100px;padding:70px;border:1px solid var(--line);border-radius:28px;background:radial-gradient(circle at 80% 30%,rgba(73,167,255,.1),transparent 35%),var(--panel)}.four-years>span{font:700 10px Space Grotesk;letter-spacing:.18em;color:var(--blue)}.four-years h3{font:700 clamp(48px,7vw,105px) Space Grotesk;letter-spacing:-.06em;line-height:.83;margin:35px 0}.four-years h3 em{font-style:normal;color:transparent;-webkit-text-stroke:1px rgba(243,247,251,.55)}.four-years>p{max-width:650px;color:var(--muted);line-height:1.7}.year-track{position:relative;display:flex;justify-content:space-between;margin-top:65px;padding-top:20px}.year-track:before{content:"";position:absolute;left:0;right:0;top:0;height:1px;background:var(--line)}.year-track i{position:absolute;top:-4px;left:0;width:9px;height:9px;border-radius:50%;background:var(--blue);box-shadow:0 0 20px var(--blue);animation:timeline 6s ease-in-out infinite alternate}.year-track b{font:600 9px Space Grotesk;color:var(--muted);letter-spacing:.1em}@keyframes timeline{to{left:calc(100% - 9px)}}
 .universe-v3{overflow:hidden}.universe-grid{display:grid;grid-template-columns:.8fr 1.2fr;align-items:center;min-height:650px}.universe-copy h2{font:700 clamp(48px,6vw,90px) Space Grotesk;line-height:.9;letter-spacing:-.055em;margin:0 0 35px}.universe-copy h2 span{color:var(--blue)}.universe-copy p{color:var(--muted);line-height:1.8;max-width:500px}.universe-copy small{display:block;margin-top:35px;color:var(--mag);font:700 10px Space Grotesk;letter-spacing:.18em}.sphere-v3{height:650px;position:relative}.sphere-v3 canvas{width:100%;height:100%;cursor:grab}.sphere-v3 canvas:active{cursor:grabbing}.sphere-center{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font:700 28px Space Grotesk;color:#fff;text-shadow:0 0 30px var(--blue);pointer-events:none}
 @media(max-width:900px){.mind-grid-v3,.universe-grid{grid-template-columns:1fr}.sphere-v3{height:520px}.four-years{padding:45px 30px}}@media(max-width:600px){.sphere-v3{height:420px}.four-years{padding:35px 22px}.year-track b{font-size:7px}.mind-v3{min-height:440px}}
+
+/* V4 interactive knowledge, credentials and QR refinements */
+.skill-cloud .skill-chip{appearance:none;border:1px solid var(--line);background:rgba(13,18,27,.72);color:var(--text);border-radius:999px;padding:11px 15px;font:600 13px Manrope,sans-serif;cursor:pointer;transition:.28s transform,.28s border-color,.28s background,.28s box-shadow}.skill-cloud .skill-chip:hover,.skill-cloud .skill-chip:focus-visible{transform:translateY(-3px);border-color:rgba(73,167,255,.65);background:rgba(73,167,255,.1);box-shadow:0 10px 30px rgba(25,105,210,.12);outline:none}.skill-cloud .skill-chip:active{transform:scale(.97)}
+.info-modal{position:fixed;inset:0;z-index:1200;background:rgba(4,7,12,.78);backdrop-filter:blur(16px);display:flex;align-items:center;justify-content:center;padding:24px;opacity:0;visibility:hidden;transition:.3s}.info-modal.open{opacity:1;visibility:visible}.info-card,.qr-pop-card{width:min(580px,94vw);position:relative;border:1px solid rgba(73,167,255,.3);border-radius:24px;background:radial-gradient(circle at 85% 10%,rgba(73,167,255,.15),transparent 35%),linear-gradient(145deg,#0e131d,#090d14);box-shadow:0 35px 100px rgba(0,0,0,.55);padding:42px;transform:translateY(25px) scale(.97);transition:.35s cubic-bezier(.2,.8,.2,1)}.info-modal.open .info-card,.info-modal.open .qr-pop-card{transform:none}.info-close{position:absolute;right:18px;top:14px;border:0;background:transparent;color:var(--muted);font-size:32px;cursor:pointer}.info-close:hover{color:var(--text);transform:rotate(90deg)}.info-kicker{font:700 10px Space Grotesk;letter-spacing:.17em;color:var(--blue)}.info-card h3{font:700 clamp(34px,5vw,58px) Space Grotesk;letter-spacing:-.045em;margin:28px 0 18px}.info-card p{font-size:17px;line-height:1.8;color:var(--muted);margin:0}.info-line{height:2px;width:100%;margin-top:35px;background:linear-gradient(90deg,var(--blue),var(--mag),transparent);animation:infoScan 1.2s ease both}@keyframes infoScan{from{width:0}}
+.qr-trigger{cursor:pointer;border:1px solid var(--line)!important;color:inherit;text-align:center;font:inherit}.qr-trigger:hover{border-color:rgba(73,167,255,.55)!important;transform:translateY(-5px)}.qr-pop-card{width:min(440px,94vw);text-align:center;padding:46px}.qr-pop-card img{display:block;width:min(320px,76vw);height:auto;aspect-ratio:1/1;object-fit:contain;margin:0 auto;border-radius:20px;background:#fff}.qr-pop-card h3{font:700 24px Space Grotesk;margin:24px 0 7px}.qr-pop-card p{font:700 10px Space Grotesk;letter-spacing:.15em;color:var(--muted)}#showmore{min-width:220px;transition:.3s transform,.3s border-color}#showmore:hover{transform:translateY(-3px)}
+@media(max-width:600px){.info-card{padding:34px 25px}.info-card p{font-size:15px}.qr-pop-card{padding:38px 22px}.skill-cloud .skill-chip{font-size:12px;padding:10px 13px}}
+
+/* V4.1 QR popup refinement — remove white rectangular backing */
+.qr-pop-card img{
+  background:transparent !important;
+  border-radius:0 !important;
+  padding:0 !important;
+  box-shadow:none !important;
+}
+
+/* V4.2 — contact QR blends into the portfolio theme */
+.contact .qr-trigger{
+  background:transparent !important;
+  border:0 !important;
+  box-shadow:none !important;
+  padding:0 !important;
+  border-radius:0 !important;
+  overflow:visible !important;
+}
+.contact .qr-trigger img{
+  display:block;
+  width:min(320px,100%);
+  height:auto;
+  margin:0 auto;
+  background:transparent !important;
+  border:0 !important;
+  box-shadow:none !important;
+}
+.contact .qr-trigger p{
+  margin-top:14px;
+  color:var(--muted);
+  background:transparent !important;
+}
+.contact .qr-trigger:hover{
+  transform:translateY(-4px);
+  background:transparent !important;
+  box-shadow:none !important;
+}
