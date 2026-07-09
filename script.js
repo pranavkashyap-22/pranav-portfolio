@@ -33,7 +33,12 @@ document.querySelectorAll('.info-modal').forEach(m=>{m.querySelector('.info-clos
 document.addEventListener('keydown',e=>{if(e.key==='Escape')document.querySelectorAll('.info-modal.open').forEach(m=>m.classList.remove('open'))});
 
 // V5 portfolio experience
-window.addEventListener('load',()=>setTimeout(()=>document.getElementById('siteLoader')?.classList.add('done'),650));
+window.addEventListener('load',()=>{
+  const loader=document.getElementById('siteLoader');
+  if(!loader)return;
+  setTimeout(()=>loader.classList.add('loader-exit'),1450);
+  setTimeout(()=>loader.classList.add('done'),2150);
+});
 const cursorLight=document.getElementById('cursorLight');
 if(cursorLight) document.addEventListener('pointermove',e=>{cursorLight.style.left=e.clientX+'px';cursorLight.style.top=e.clientY+'px'});
 const backTop=document.getElementById('backTop');
