@@ -103,10 +103,10 @@ function frame(t){
 (()=>{
 const boardEl=document.getElementById('v8Board');if(!boardEl)return;
 const turnEl=document.getElementById('v8Turn'),statusEl=document.getElementById('v8ChessStatus'),capturedEl=document.getElementById('v8Captured'),movesEl=document.getElementById('v8Moves');
-const whiteBtn=document.getElementById('v10White'),blackBtn=document.getElementById('v10Black');
+const whiteBtn=document.getElementById('v10White'),blackBtn=document.getElementById('v10Black'),computerBtn=document.getElementById('v103Computer'),twoBtn=document.getElementById('v103TwoPlayer');
 const glyph={wK:'♔',wQ:'♕',wR:'♖',wB:'♗',wN:'♘',wP:'♙',bK:'♚',bQ:'♛',bR:'♜',bB:'♝',bN:'♞',bP:'♟'};
 const val={P:100,N:320,B:330,R:500,Q:900,K:20000};
-let B,turn,sel,legal,history,captured,moves,castle,player='w',aiBusy=false;
+let B,turn,sel,legal,history,captured,moves,castle,player='w',mode='computer',aiBusy=false;
 const clone=o=>JSON.parse(JSON.stringify(o)),rc=i=>[Math.floor(i/8),i%8],idx=(r,c)=>r*8+c,inside=(r,c)=>r>=0&&r<8&&c>=0&&c<8,color=p=>p?.[0],type=p=>p?.[1];
 function say(s){if(statusEl)statusEl.textContent=s}
 function attacks(pos,from,forCheck=false){const p=pos[from];if(!p)return[];const [r,c]=rc(from),co=color(p),t=type(p),out=[];const add=(rr,cc)=>{if(inside(rr,cc))out.push(idx(rr,cc))};const slide=dirs=>dirs.forEach(([dr,dc])=>{let rr=r+dr,cc=c+dc;while(inside(rr,cc)){let j=idx(rr,cc);out.push(j);if(pos[j])break;rr+=dr;cc+=dc}});
@@ -118,12 +118,38 @@ return out.filter(j=>!pos[j]||color(pos[j])!==co)}
 function checked(pos,co){let k=pos.findIndex(p=>p===co+'K');return k>=0&&pos.some((p,i)=>p&&color(p)!==co&&attacks(pos,i,true).includes(k))}
 function legalMoves(from){return attacks(B,from).filter(to=>{let p=B[from],tmp=B.slice(),base=color(p)==='w'?60:4;if(type(p)==='K'&&Math.abs(to-from)===2){let step=to>from?1:-1;if(checked(tmp,color(p)))return false;let mid=from+step,t2=tmp.slice();t2[mid]=t2[from];t2[from]=null;if(checked(t2,color(p)))return false;tmp[to]=tmp[from];tmp[from]=null;let rook=step===1?base+3:base-4,rt=step===1?to-1:to+1;tmp[rt]=tmp[rook];tmp[rook]=null}else{tmp[to]=tmp[from];tmp[from]=null}return !checked(tmp,color(p))})}
 function allMoves(co){let a=[];B.forEach((p,i)=>{if(p&&color(p)===co)legalMoves(i).forEach(to=>a.push({from:i,to,cap:B[to]}))});return a}
-function perform(from,to,ai=false){history.push({B:B.slice(),turn,captured:captured.slice(),moves:moves.slice(),castle:clone(castle)});let p=B[from],cap=B[to],co=color(p),base=co==='w'?60:4;if(cap)captured.push(cap);if(type(p)==='K'){castle[co+'K']=0;if(Math.abs(to-from)===2){let rook=to>from?base+3:base-4,rt=to>from?to-1:to+1;B[rt]=B[rook];B[rook]=null}}if(type(p)==='R'){if(from===base-4)castle[co+'R0']=0;if(from===base+3)castle[co+'R7']=0}B[to]=p;B[from]=null;if(type(p)==='P'&&(rc(to)[0]===0||rc(to)[0]===7))B[to]=co+'Q';moves.push(`${String.fromCharCode(97+rc(from)[1])}${8-rc(from)[0]}–${String.fromCharCode(97+rc(to)[1])}${8-rc(to)[0]}`);turn=turn==='w'?'b':'w';sel=null;legal=[];render();let avail=allMoves(turn);if(!avail.length)say(checked(B,turn)?`CHECKMATE — ${turn==='w'?'BLACK':'WHITE'} WINS`:'STALEMATE');else if(checked(B,turn))say('CHECK. Choose your response.');else say(turn===player?'YOUR MOVE — select a piece.':'FLUID AI IS READING THE POSITION…');if(turn!==player&&avail.length)setTimeout(aiMove,520)}
-function aiMove(){if(aiBusy||turn===player)return;aiBusy=true;boardEl.classList.add('v10-thinking');let choices=allMoves(turn);if(!choices.length){aiBusy=false;return}choices.forEach(m=>{let [r,c]=rc(m.to);m.score=(m.cap?val[type(m.cap)]*12:0)+(14-Math.abs(3.5-c)-Math.abs(3.5-r))*5+Math.random()*18});choices.sort((a,b)=>b.score-a.score);let m=choices[0];setTimeout(()=>{perform(m.from,m.to,true);boardEl.classList.remove('v10-thinking');aiBusy=false},300)}
-function click(i){if(aiBusy||turn!==player)return;if(sel!==null&&legal.includes(i)){perform(sel,i);return}if(B[i]&&color(B[i])===player){sel=i;legal=legalMoves(i);say(`${glyph[B[i]]} selected — ${legal.length} legal move${legal.length===1?'':'s'}.`);render()}else{sel=null;legal=[];say('Choose one of your '+(player==='w'?'white':'black')+' pieces.');render()}}
+function perform(from,to,ai=false){history.push({B:B.slice(),turn,captured:captured.slice(),moves:moves.slice(),castle:clone(castle)});let p=B[from],cap=B[to],co=color(p),base=co==='w'?60:4;if(cap)captured.push(cap);if(type(p)==='K'){castle[co+'K']=0;if(Math.abs(to-from)===2){let rook=to>from?base+3:base-4,rt=to>from?to-1:to+1;B[rt]=B[rook];B[rook]=null}}if(type(p)==='R'){if(from===base-4)castle[co+'R0']=0;if(from===base+3)castle[co+'R7']=0}B[to]=p;B[from]=null;if(type(p)==='P'&&(rc(to)[0]===0||rc(to)[0]===7))B[to]=co+'Q';moves.push(`${String.fromCharCode(97+rc(from)[1])}${8-rc(from)[0]}–${String.fromCharCode(97+rc(to)[1])}${8-rc(to)[0]}`);turn=turn==='w'?'b':'w';sel=null;legal=[];render();let avail=allMoves(turn);if(!avail.length)say(checked(B,turn)?(mode==='computer'?(turn===player?'YOU GOT CHECKMATED — COMPUTER WINS':'CHECKMATE — YOU CHECKMATED THE COMPUTER'):`CHECKMATE — ${turn==='w'?'BLACK':'WHITE'} CHECKMATED ${turn==='w'?'WHITE':'BLACK'}`):'STALEMATE');else if(checked(B,turn))say('CHECK. Choose your response.');else say(mode==='computer'?(turn===player?'YOUR MOVE — select a piece.':'FLUID AI IS READING THE POSITION…'):`${turn==='w'?'WHITE':'BLACK'} PLAYER TO MOVE.`);if(mode==='computer'&&turn!==player&&avail.length)setTimeout(aiMove,320)}
+function evaluate(pos,co){
+ let score=0;
+ pos.forEach((p,i)=>{if(!p)return;const sign=color(p)===co?1:-1,[r,c]=rc(i),center=7-Math.abs(3.5-r)-Math.abs(3.5-c);score+=sign*(val[type(p)]+center*(type(p)==='P'?3:7))});
+ return score;
+}
+function aiMove(){
+ if(aiBusy||mode!=='computer'||turn===player)return;
+ aiBusy=true;boardEl.classList.add('v10-thinking');
+ const ai=turn,choices=allMoves(ai);
+ if(!choices.length){aiBusy=false;boardEl.classList.remove('v10-thinking');return}
+ let best=-Infinity,bestMoves=[];
+ choices.forEach(m=>{
+   const saveB=B.slice(),saveCastle=clone(castle),saveTurn=turn;
+   let p=B[m.from];B[m.to]=p;B[m.from]=null;
+   let score=evaluate(B,ai)+(m.cap?val[type(m.cap)]*2.4:0);
+   const enemy=ai==='w'?'b':'w';turn=enemy;
+   let replies=allMoves(enemy),worst=0;
+   replies.forEach(r=>{let penalty=(r.cap?val[type(r.cap)]*2.1:0);if(penalty>worst)worst=penalty});
+   score-=worst;
+   if(checked(B,enemy))score+=85;
+   B=saveB;castle=saveCastle;turn=saveTurn;
+   score+=Math.random()*4;
+   if(score>best+1){best=score;bestMoves=[m]}else if(Math.abs(score-best)<=1)bestMoves.push(m);
+ });
+ const m=bestMoves[Math.floor(Math.random()*bestMoves.length)]||choices[0];
+ setTimeout(()=>{perform(m.from,m.to,true);boardEl.classList.remove('v10-thinking');aiBusy=false},220);
+}
+function click(i){if(aiBusy||(mode==='computer'&&turn!==player))return;if(sel!==null&&legal.includes(i)){perform(sel,i);return}if(B[i]&&color(B[i])===(mode==='computer'?player:turn)){sel=i;legal=legalMoves(i);say(`${glyph[B[i]]} selected — ${legal.length} legal move${legal.length===1?'':'s'}.`);render()}else{sel=null;legal=[];say('Choose one of '+((mode==='computer'?player:turn)==='w'?'White':'Black')+' pieces.');render()}}
 function render(){boardEl.innerHTML='';B.forEach((p,i)=>{let b=document.createElement('button');b.type='button';b.className='v8-square '+(((Math.floor(i/8)+i%8)%2)?'dark':'light');if(i===sel)b.classList.add('selected');if(legal.includes(i))b.classList.add(B[i]?'capture':'legal');b.dataset.i=i;if(p){let s=document.createElement('span');s.className='v8-piece '+(color(p)==='w'?'piece-white':'piece-black');s.textContent=glyph[p];b.appendChild(s)}b.onclick=()=>click(i);boardEl.appendChild(b)});turnEl.textContent=(turn==='w'?'WHITE':'BLACK')+' TO MOVE';capturedEl.textContent=captured.map(p=>glyph[p]).join(' ');movesEl.innerHTML=moves.map((m,i)=>`<span>${i+1}. ${m}</span>`).join('')}
-function fresh(){B=Array(64).fill(null);['R','N','B','Q','K','B','N','R'].forEach((p,c)=>{B[c]='b'+p;B[8+c]='bP';B[48+c]='wP';B[56+c]='w'+p});turn='w';sel=null;legal=[];history=[];captured=[];moves=[];castle={wK:1,wR0:1,wR7:1,bK:1,bR0:1,bR7:1};aiBusy=false;boardEl.classList.toggle('v10-flipped',player==='b');whiteBtn?.classList.toggle('active',player==='w');blackBtn?.classList.toggle('active',player==='b');render();say(player==='w'?'You are White. Make the first move.':'You are Black. Fluid AI opens as White.');if(player==='b')setTimeout(aiMove,500)}
-whiteBtn?.addEventListener('click',()=>{player='w';fresh()});blackBtn?.addEventListener('click',()=>{player='b';fresh()});
+function fresh(){B=Array(64).fill(null);['R','N','B','Q','K','B','N','R'].forEach((p,c)=>{B[c]='b'+p;B[8+c]='bP';B[48+c]='wP';B[56+c]='w'+p});turn='w';sel=null;legal=[];history=[];captured=[];moves=[];castle={wK:1,wR0:1,wR7:1,bK:1,bR0:1,bR7:1};aiBusy=false;boardEl.classList.toggle('v10-flipped',player==='b');whiteBtn?.classList.toggle('active',player==='w');blackBtn?.classList.toggle('active',player==='b');computerBtn?.classList.toggle('active',mode==='computer');twoBtn?.classList.toggle('active',mode==='two');document.querySelector('.v10-side-picker')?.classList.toggle('v103-disabled',mode==='two');render();say(mode==='two'?'Two-player mode. White moves first.':(player==='w'?'You are White. Make the first move.':'You are Black. Strong AI opens as White.'));if(mode==='computer'&&player==='b')setTimeout(aiMove,350)}
+whiteBtn?.addEventListener('click',()=>{if(mode==='computer'){player='w';fresh()}});blackBtn?.addEventListener('click',()=>{if(mode==='computer'){player='b';fresh()}});computerBtn?.addEventListener('click',()=>{mode='computer';fresh()});twoBtn?.addEventListener('click',()=>{mode='two';fresh()});
 document.getElementById('v8Reset')?.addEventListener('click',fresh);
 document.getElementById('v8Undo')?.addEventListener('click',()=>{if(aiBusy)return;let h=history.pop();if(!h)return say('No move to undo yet.');if(h.turn!==player&&history.length)h=history.pop();B=h.B;turn=h.turn;sel=null;legal=[];captured=h.captured;moves=h.moves;castle=h.castle;render();say('Move undone. Read the board again.')});
 fresh();

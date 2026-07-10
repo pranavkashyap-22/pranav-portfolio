@@ -667,3 +667,12 @@ transform:perspective(700px) rotateX(61deg) scale(1.2);transform-origin:50% 60%;
 @keyframes v102TypeBody{to{transform:rotate(.8deg) translateY(2px)}}@keyframes v102TypeA{to{transform:rotate(-7deg) translateY(3px)}}@keyframes v102TypeB{to{transform:rotate(3deg) translateY(-2px)}}@keyframes v102ScreenPulse{to{opacity:.72;transform:scale(1.04)}}@keyframes v102Caret{50%{opacity:0}}
 @media(max-width:800px){.v102-desk-scene{min-height:560px}.v102-worker{left:20%;width:38%;top:39%}.v102-monitor{left:54%;width:40%}.v102-hero-avatar-glow{left:3%;width:70vw}}
 @media(prefers-reduced-motion:reduce){.v102-worker,.v102-arm,.v102-monitor-glow,.v102-screen i{animation:none!important}}
+
+/* ================= V10.3 — CHESS FINAL FIX ================= */
+.v103-game-mode{margin-top:30px;padding-top:20px;border-top:1px solid var(--line)}
+.v103-game-mode label{display:block;font:700 7px "Space Grotesk";letter-spacing:.18em;color:#647285;margin-bottom:12px}
+.v103-game-mode div{display:flex;gap:8px;flex-wrap:wrap}
+.v103-game-mode button{cursor:none;border:1px solid #263443;background:#090f16;color:#8795a5;padding:11px 17px;font:700 8px "Space Grotesk";letter-spacing:.15em;transition:.16s}
+.v103-game-mode button.active{color:#f5edff;border-color:#a855f7;background:rgba(168,85,247,.16);box-shadow:0 0 18px rgba(168,85,247,.12)}
+.v10-side-picker.v103-disabled{opacity:.32;pointer-events:none;filter:saturate(.3)}
+@media(max-width:760px){.v103-game-mode button{cursor:pointer}}
