@@ -8,18 +8,205 @@
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body><div class="v102-hero-avatar-glow" aria-hidden="true"></div>
+<canvas id="v8Fluid" aria-hidden="true"></canvas>
+<div id="v8Cursor" aria-hidden="true"><i></i></div>
 <div class="noise"></div><div class="cursor-glow" id="glow"></div>
-<header><a class="mark" href="#home">PKJ<span>.</span></a><button class="menu" id="menu" aria-label="Open menu">☰</button><nav id="nav"><a href="#about">About</a><a href="#domains">Domains</a><a href="#mindset">Mindset</a><a href="#builds">Builds</a><a href="#credentials">Credentials</a><a href="#resume">Resume</a><a href="#skill-universe">Skills</a><a href="#contact">Contact</a></nav></header>
+<header><a class="mark" href="#home">PKJ<span>.</span></a><button class="menu" id="menu" aria-label="Open menu">☰</button><nav id="nav"><a href="#about" data-v8-label="About">About</a><a href="#desk" data-v8-label="Domains">Domains</a><a href="#mindset" data-v8-label="Mindset">Mindset</a><a href="#builds" data-v8-label="Builds">Builds</a><a href="#credentials" data-v8-label="Credentials">Credentials</a><a href="#resume" data-v8-label="Resume">Resume</a><a href="#skill-universe" data-v8-label="Skills">Skills</a><a href="#play" data-v8-label="Play">Play</a><a href="#contact" data-v8-label="Contact">Contact</a></nav></header>
 <main>
-<section class="hero" id="home">
-  <div class="hero-copy reveal"><p class="eyebrow">ASPIRING COMPUTER SCIENCE ENGINEER</p><h1>PRANAV<br><span>KUMAR JHA</span></h1><p class="motto">I explore. I learn. <strong>I build.</strong></p><p class="intro">A curiosity-driven technologist exploring <span id="typeword">CYBERSECURITY</span> and turning new ideas into practical experiments.</p><div class="actions"><a class="primary" href="#builds">Explore my work ↗</a><a class="secondary" href="#contact">Let's connect</a></div>
-  <div class="mini-stats"><div><b>11+</b><span>Credentials</span></div><div><b>4</b><span>Core domains</span></div><div><b>1 yr</b><span>Teaching experience</span></div></div></div>
-  <div class="portrait-wrap reveal"><div class="orbit"></div><img src="assets/pranav-portrait-blended.png" alt="Portrait of Pranav Kumar Jha"><button class="status" id="opportunityTrigger" type="button" aria-haspopup="dialog">● OPEN TO LEARNING &amp; OPPORTUNITIES</button></div>
+<aside class="v87-social-rail" aria-label="Social links">
+<a href="https://github.com/pranavkashyap-22" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .8a11.4 11.4 0 0 0-3.6 22.2c.6.1.8-.2.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.5-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.3 11.3 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .4.2.7.8.6A11.4 11.4 0 0 0 12 .8Z"/></svg></a>
+<a href="https://www.linkedin.com/in/pranav-k-a853a4385" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5.3 7.9H1.7V22h3.6V7.9ZM3.5 2A2.1 2.1 0 1 0 3.5 6.2 2.1 2.1 0 0 0 3.5 2ZM22 13.9c0-4.2-2.2-6.2-5.2-6.2-2.4 0-3.5 1.3-4.1 2.2v-2H9.1V22h3.6v-7c0-1.9.4-3.7 2.7-3.7 2.3 0 2.3 2.1 2.3 3.8V22H22v-8.1Z"/></svg></a>
+<a href="https://www.instagram.com/pranav_kashyap22" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Z"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg></a>
+<a href="mailto:jhaarunakumari772@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M3 5h18v14H3z"/><path fill="none" stroke="currentColor" stroke-width="2" d="m3 6 9 7 9-7"/></svg></a>
+</aside><section class="hero v82-hero" id="home">
+<div class="v82-hero-copy v85-hero-copy">
+<p class="v85-hero-kicker">A CREATIVE</p>
+<h1>DEVELOPER</h1>
+<i class="v85-title-line"></i>
+<p class="motto">I build digital experiences<br>that make an impact.</p>
+<div class="v85-code-pill"><b>&lt;/&gt;</b><span>CODE · SOLVE · CREATE · REPEAT.</span></div>
+<div class="actions"><a class="primary" href="#about">Enter my world ↘</a><a class="secondary" href="#builds">See my work ↗</a><button class="secondary v90-hire-open v10-hire-btn" type="button">Hire me ↗</button></div>
+</div>
+<div class="v82-hero-avatar" id="v82HeroAvatar"><div class="v88-avatar" aria-label="Interactive 3D dark rabbit avatar">
+<div class="v88-rig">
+<svg class="v88-rabbit" viewBox="0 0 700 900" role="img" aria-label="Interactive dark rabbit developer avatar">
+<defs>
+ <radialGradient id="fur88" cx="38%" cy="24%" r="78%"><stop offset="0" stop-color="#77777a"/><stop offset=".22" stop-color="#57575b"/><stop offset=".58" stop-color="#29292e"/><stop offset="1" stop-color="#101014"/></radialGradient>
+ <linearGradient id="furEdge88" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#8a8a8d"/><stop offset=".38" stop-color="#3a3a3f"/><stop offset="1" stop-color="#111115"/></linearGradient>
+ <linearGradient id="shirt88" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#242329"/><stop offset=".45" stop-color="#09090c"/><stop offset="1" stop-color="#17151d"/></linearGradient>
+ <linearGradient id="lens88" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#28272e"/><stop offset=".45" stop-color="#08080b"/><stop offset="1" stop-color="#020204"/></linearGradient>
+ <pattern id="rib88" width="5" height="5" patternUnits="userSpaceOnUse"><path d="M0 1h5M0 3h5" stroke="#8e8b95" stroke-opacity=".12" stroke-width=".65"/></pattern>
+ <filter id="shadow88"><feDropShadow dx="0" dy="25" stdDeviation="25" flood-color="#000" flood-opacity=".75"/></filter>
+ <filter id="furNoise88"><feTurbulence type="fractalNoise" baseFrequency=".75" numOctaves="2" seed="7" result="n"/><feComposite in="n" in2="SourceGraphic" operator="in" result="t"/><feBlend in="SourceGraphic" in2="t" mode="soft-light"/></filter>
+</defs>
+<ellipse cx="350" cy="862" rx="230" ry="25" fill="#9b4de2" opacity=".08"/>
+<g class="v88-body" filter="url(#shadow88)">
+ <path d="M101 900c15-177 78-266 192-298h114c114 32 177 121 192 298z" fill="url(#shirt88)"/>
+ <path d="M101 900c15-177 78-266 192-298h114c114 32 177 121 192 298z" fill="url(#rib88)"/>
+ <path d="M280 604h140l17 63c-35 31-139 31-174 0z" fill="url(#fur88)" filter="url(#furNoise88)"/>
+ <g transform="translate(0 18)" opacity=".92">
+  <path d="M350 694c-34 0-60 23-60 55 0 21 11 38 29 48v25h20v-18h22v18h20v-25c18-10 29-27 29-48 0-32-26-55-60-55z" fill="#d8d6d9"/>
+  <circle cx="326" cy="744" r="12" fill="#111116"/><circle cx="374" cy="744" r="12" fill="#111116"/>
+  <path d="M331 777h38l-6 18h-26z" fill="#111116"/>
+ </g>
+</g>
+<g class="v88-head">
+ <path d="M238 260C180 120 217 14 276 29c58 15 57 153 40 250z" fill="url(#furEdge88)" transform="rotate(-7 275 260)" filter="url(#furNoise88)"/>
+ <path d="M462 260C520 120 483 14 424 29c-58 15-57 153-40 250z" fill="url(#furEdge88)" transform="rotate(7 425 260)" filter="url(#furNoise88)"/>
+ <path d="M255 235C219 126 244 61 272 68c31 8 30 109 18 177zM445 235c36-109 11-174-17-167-31 8-30 109-18 177z" fill="#17171c" opacity=".72"/>
+ <ellipse cx="350" cy="426" rx="196" ry="185" fill="url(#fur88)" filter="url(#furNoise88)"/>
+ <ellipse cx="350" cy="493" rx="151" ry="92" fill="#222228" opacity=".48"/>
+ <g class="v88-glasses">
+  <path d="M194 367l46-15 96 8 14 12 14-12 96-8 46 15" fill="none" stroke="#28272d" stroke-width="8" stroke-linecap="round"/>
+  <path d="M220 356q57-15 116 4l-8 82q-51 29-101-5zM480 356q-57-15-116 4l8 82q51 29 101-5z" fill="url(#lens88)" stroke="#34333a" stroke-width="7"/>
+  <path d="M235 367q42-10 82 2M383 369q40-12 82-2" fill="none" stroke="#77737f" stroke-opacity=".22" stroke-width="5" stroke-linecap="round"/>
+ </g>
+ <path d="M350 448l-16 12 16 14 16-14z" fill="#d4a29e"/>
+ <path d="M316 513q34 14 68 0" fill="none" stroke="#09090c" stroke-width="9" stroke-linecap="round"/>
+</g>
+</svg>
+</div></div></div>
+<div class="v82-scroll-cue">SCROLL TO SHIFT THE SCENE <i></i></div>
 </section>
-<section class="section about" id="about"><div class="section-tag">01 / WHO I AM</div><div class="about-grid"><h2>Curiosity is my<br><span>operating system.</span></h2><div><p class="lead">I'm Pranav Kumar Jha, an aspiring Computer Science engineer who learns by exploring, experimenting and building.</p><p>My path has moved through cybersecurity, AI, data analytics, digital marketing and web development. I don't claim to know everything. I care about understanding more than I knew yesterday and putting that knowledge into practice.</p><p>I also have one year of teaching experience. Communication is a skill I'm actively strengthening—especially spoken confidence—while my English reading, listening and writing are strong.</p></div></div><div class="journey"><article><span>2025</span><h3>Cybersecurity & IAM</h3><p>Explored security foundations, web application testing concepts and identity & access management.</p></article><article><span>2025</span><h3>AI & Data</h3><p>Learned practical AI concepts, prompt engineering, ChatGPT workflows and data analytics.</p></article><article><span>NOW</span><h3>Building toward CSE</h3><p>Preparing for B.Tech CSE while expanding Java, web and broader computer science knowledge.</p></article></div></section>
-<section class="section" id="domains"><div class="section-tag">02 / TECHNOLOGY DOMAINS</div><div class="section-head"><h2>Areas I keep<br><span>coming back to.</span></h2><p>Not boxes I lock myself into—domains I actively explore.</p></div><div class="domain-grid"><article class="domain"><b>01</b><div class="icon">⌁</div><h3>Cybersecurity</h3><p>Security fundamentals, IAM, cyber analysis and web application penetration-testing concepts.</p><div class="chips"><span>IAM</span><span>Web Security</span><span>Ethical Hacking</span></div></article><article class="domain"><b>02</b><div class="icon">✦</div><h3>Artificial Intelligence</h3><p>Prompt engineering, AI-assisted workflows, ChatGPT and creative applications of emerging AI tools.</p><div class="chips"><span>Prompting</span><span>ChatGPT</span><span>AI Tools</span></div></article><article class="domain"><b>03</b><div class="icon">▥</div><h3>Data & Analysis</h3><p>Foundational data analysis and exposure to forensic technology through practical simulations.</p><div class="chips"><span>Analysis</span><span>Data</span><span>Forensics</span></div></article><article class="domain"><b>04</b><div class="icon">↗</div><h3>Web & Digital</h3><p>HTML, CSS, some Java, digital marketing, Meta advertising and Instagram marketing foundations.</p><div class="chips"><span>HTML/CSS</span><span>Java</span><span>Digital</span></div></article></div></section>
-<section class="section mindset-v3" id="mindset">
+<section class="section v82-about" id="about">
+<div class="section-tag">01 / WHO I AM</div>
+<div class="v82-about-stage">
+ <div class="v82-about-avatar" id="v82AboutAvatar"><div class="v88-avatar" aria-label="Interactive 3D dark rabbit avatar">
+<div class="v88-rig">
+<svg class="v88-rabbit" viewBox="0 0 700 900" role="img" aria-label="Interactive dark rabbit developer avatar">
+<defs>
+ <radialGradient id="fur88" cx="38%" cy="24%" r="78%"><stop offset="0" stop-color="#77777a"/><stop offset=".22" stop-color="#57575b"/><stop offset=".58" stop-color="#29292e"/><stop offset="1" stop-color="#101014"/></radialGradient>
+ <linearGradient id="furEdge88" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#8a8a8d"/><stop offset=".38" stop-color="#3a3a3f"/><stop offset="1" stop-color="#111115"/></linearGradient>
+ <linearGradient id="shirt88" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#242329"/><stop offset=".45" stop-color="#09090c"/><stop offset="1" stop-color="#17151d"/></linearGradient>
+ <linearGradient id="lens88" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#28272e"/><stop offset=".45" stop-color="#08080b"/><stop offset="1" stop-color="#020204"/></linearGradient>
+ <pattern id="rib88" width="5" height="5" patternUnits="userSpaceOnUse"><path d="M0 1h5M0 3h5" stroke="#8e8b95" stroke-opacity=".12" stroke-width=".65"/></pattern>
+ <filter id="shadow88"><feDropShadow dx="0" dy="25" stdDeviation="25" flood-color="#000" flood-opacity=".75"/></filter>
+ <filter id="furNoise88"><feTurbulence type="fractalNoise" baseFrequency=".75" numOctaves="2" seed="7" result="n"/><feComposite in="n" in2="SourceGraphic" operator="in" result="t"/><feBlend in="SourceGraphic" in2="t" mode="soft-light"/></filter>
+</defs>
+<ellipse cx="350" cy="862" rx="230" ry="25" fill="#9b4de2" opacity=".08"/>
+<g class="v88-body" filter="url(#shadow88)">
+ <path d="M101 900c15-177 78-266 192-298h114c114 32 177 121 192 298z" fill="url(#shirt88)"/>
+ <path d="M101 900c15-177 78-266 192-298h114c114 32 177 121 192 298z" fill="url(#rib88)"/>
+ <path d="M280 604h140l17 63c-35 31-139 31-174 0z" fill="url(#fur88)" filter="url(#furNoise88)"/>
+ <g transform="translate(0 18)" opacity=".92">
+  <path d="M350 694c-34 0-60 23-60 55 0 21 11 38 29 48v25h20v-18h22v18h20v-25c18-10 29-27 29-48 0-32-26-55-60-55z" fill="#d8d6d9"/>
+  <circle cx="326" cy="744" r="12" fill="#111116"/><circle cx="374" cy="744" r="12" fill="#111116"/>
+  <path d="M331 777h38l-6 18h-26z" fill="#111116"/>
+ </g>
+</g>
+<g class="v88-head">
+ <path d="M238 260C180 120 217 14 276 29c58 15 57 153 40 250z" fill="url(#furEdge88)" transform="rotate(-7 275 260)" filter="url(#furNoise88)"/>
+ <path d="M462 260C520 120 483 14 424 29c-58 15-57 153-40 250z" fill="url(#furEdge88)" transform="rotate(7 425 260)" filter="url(#furNoise88)"/>
+ <path d="M255 235C219 126 244 61 272 68c31 8 30 109 18 177zM445 235c36-109 11-174-17-167-31 8-30 109-18 177z" fill="#17171c" opacity=".72"/>
+ <ellipse cx="350" cy="426" rx="196" ry="185" fill="url(#fur88)" filter="url(#furNoise88)"/>
+ <ellipse cx="350" cy="493" rx="151" ry="92" fill="#222228" opacity=".48"/>
+ <g class="v88-glasses">
+  <path d="M194 367l46-15 96 8 14 12 14-12 96-8 46 15" fill="none" stroke="#28272d" stroke-width="8" stroke-linecap="round"/>
+  <path d="M220 356q57-15 116 4l-8 82q-51 29-101-5zM480 356q-57-15-116 4l8 82q51 29 101-5z" fill="url(#lens88)" stroke="#34333a" stroke-width="7"/>
+  <path d="M235 367q42-10 82 2M383 369q40-12 82-2" fill="none" stroke="#77737f" stroke-opacity=".22" stroke-width="5" stroke-linecap="round"/>
+ </g>
+ <path d="M350 448l-16 12 16 14 16-14z" fill="#d4a29e"/>
+ <path d="M316 513q34 14 68 0" fill="none" stroke="#09090c" stroke-width="9" stroke-linecap="round"/>
+</g>
+</svg>
+</div></div></div>
+ <div class="v82-about-copy">
+  <span class="v82-kicker">FROM SAHARSA → TOWARD COMPUTER SCIENCE</span>
+  <h2>I am still becoming<br><span>the person I want to be.</span></h2>
+  <p class="lead">I'm Pranav Kumar Jha, from Saharsa, Bihar, India — an aspiring Computer Science engineer driven more by curiosity than by a single label.</p>
+  <p>I keep moving between cybersecurity, artificial intelligence, data, web development and digital systems because I enjoy understanding how things work, where they break, and how ideas become something real.</p>
+  <p>Teaching gave me patience. Chess made me respect consequences. Cube solving made patterns feel less intimidating. Building projects taught me that unfinished knowledge becomes useful only when I test it.</p>
+  <div class="v82-origin"><b>22 / 06 / 2008</b><span>BORN CURIOUS</span><b>SAHARSA, BIHAR</b><span>ROOTED HERE</span><b>COMPUTER SCIENCE</b><span>HEADING THERE</span></div>
+ </div>
+</div>
+</section>
+<section class="v82-desk-section" id="desk"><div class="v102-desk-scene" aria-label="PKJ avatar working at a computer">
+  <div class="v102-monitor-glow"></div>
+  <div class="v102-monitor"><div class="v102-screen"><b>PKJ_</b><span>observe(data); find(pattern);</span><i></i></div></div>
+  <div class="v102-lamp"><i></i><b></b></div>
+  <div class="v102-chair"></div>
+  <div class="v102-worker">
+    <div class="v102-ear left"></div><div class="v102-ear right"></div>
+    <div class="v102-head"><div class="v102-bunny-ear l"></div><div class="v102-bunny-ear r"></div><div class="v102-glasses"><i></i><i></i></div><span class="v102-nose"></span><span class="v102-smile"></span></div>
+    <div class="v102-body"><div class="v102-skull">☠</div></div>
+    <div class="v102-arm a1"></div><div class="v102-arm a2"></div>
+  </div>
+  <div class="v102-desk-top"><div class="v102-keyboard"></div><div class="v102-mug">PKJ.</div></div>
+  <div class="v102-floor-glow"></div>
+</div>
+<div class="v82-desk-copy"><span>02 / WHERE MY MIND RETURNS</span><h2>Areas I keep<br>coming back to.</h2><p>Scroll through the desk. The scene stays with you while the thoughts change around it.</p></div>
+<div class="v82-desk-sticky">
+ <div class="v82-desk-scene" id="v82DeskScene">
+  <div class="v82-window"><i></i><i></i><i></i><i></i></div>
+  <div class="v82-monitor"><div><b>PKJ_</b><span id="v82DeskCode">explore(); learn(); build();</span></div></div>
+  <div class="v82-lamp"><i></i></div>
+  <div class="v82-chair-avatar"><div class="v88-avatar" aria-label="Interactive 3D dark rabbit avatar">
+<div class="v88-rig">
+<svg class="v88-rabbit" viewBox="0 0 700 900" role="img" aria-label="Interactive dark rabbit developer avatar">
+<defs>
+ <radialGradient id="fur88" cx="38%" cy="24%" r="78%"><stop offset="0" stop-color="#77777a"/><stop offset=".22" stop-color="#57575b"/><stop offset=".58" stop-color="#29292e"/><stop offset="1" stop-color="#101014"/></radialGradient>
+ <linearGradient id="furEdge88" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#8a8a8d"/><stop offset=".38" stop-color="#3a3a3f"/><stop offset="1" stop-color="#111115"/></linearGradient>
+ <linearGradient id="shirt88" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#242329"/><stop offset=".45" stop-color="#09090c"/><stop offset="1" stop-color="#17151d"/></linearGradient>
+ <linearGradient id="lens88" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#28272e"/><stop offset=".45" stop-color="#08080b"/><stop offset="1" stop-color="#020204"/></linearGradient>
+ <pattern id="rib88" width="5" height="5" patternUnits="userSpaceOnUse"><path d="M0 1h5M0 3h5" stroke="#8e8b95" stroke-opacity=".12" stroke-width=".65"/></pattern>
+ <filter id="shadow88"><feDropShadow dx="0" dy="25" stdDeviation="25" flood-color="#000" flood-opacity=".75"/></filter>
+ <filter id="furNoise88"><feTurbulence type="fractalNoise" baseFrequency=".75" numOctaves="2" seed="7" result="n"/><feComposite in="n" in2="SourceGraphic" operator="in" result="t"/><feBlend in="SourceGraphic" in2="t" mode="soft-light"/></filter>
+</defs>
+<ellipse cx="350" cy="862" rx="230" ry="25" fill="#9b4de2" opacity=".08"/>
+<g class="v88-body" filter="url(#shadow88)">
+ <path d="M101 900c15-177 78-266 192-298h114c114 32 177 121 192 298z" fill="url(#shirt88)"/>
+ <path d="M101 900c15-177 78-266 192-298h114c114 32 177 121 192 298z" fill="url(#rib88)"/>
+ <path d="M280 604h140l17 63c-35 31-139 31-174 0z" fill="url(#fur88)" filter="url(#furNoise88)"/>
+ <g transform="translate(0 18)" opacity=".92">
+  <path d="M350 694c-34 0-60 23-60 55 0 21 11 38 29 48v25h20v-18h22v18h20v-25c18-10 29-27 29-48 0-32-26-55-60-55z" fill="#d8d6d9"/>
+  <circle cx="326" cy="744" r="12" fill="#111116"/><circle cx="374" cy="744" r="12" fill="#111116"/>
+  <path d="M331 777h38l-6 18h-26z" fill="#111116"/>
+ </g>
+</g>
+<g class="v88-head">
+ <path d="M238 260C180 120 217 14 276 29c58 15 57 153 40 250z" fill="url(#furEdge88)" transform="rotate(-7 275 260)" filter="url(#furNoise88)"/>
+ <path d="M462 260C520 120 483 14 424 29c-58 15-57 153-40 250z" fill="url(#furEdge88)" transform="rotate(7 425 260)" filter="url(#furNoise88)"/>
+ <path d="M255 235C219 126 244 61 272 68c31 8 30 109 18 177zM445 235c36-109 11-174-17-167-31 8-30 109-18 177z" fill="#17171c" opacity=".72"/>
+ <ellipse cx="350" cy="426" rx="196" ry="185" fill="url(#fur88)" filter="url(#furNoise88)"/>
+ <ellipse cx="350" cy="493" rx="151" ry="92" fill="#222228" opacity=".48"/>
+ <g class="v88-glasses">
+  <path d="M194 367l46-15 96 8 14 12 14-12 96-8 46 15" fill="none" stroke="#28272d" stroke-width="8" stroke-linecap="round"/>
+  <path d="M220 356q57-15 116 4l-8 82q-51 29-101-5zM480 356q-57-15-116 4l8 82q51 29 101-5z" fill="url(#lens88)" stroke="#34333a" stroke-width="7"/>
+  <path d="M235 367q42-10 82 2M383 369q40-12 82-2" fill="none" stroke="#77737f" stroke-opacity=".22" stroke-width="5" stroke-linecap="round"/>
+ </g>
+ <path d="M350 448l-16 12 16 14 16-14z" fill="#d4a29e"/>
+ <path d="M316 513q34 14 68 0" fill="none" stroke="#09090c" stroke-width="9" stroke-linecap="round"/>
+</g>
+</svg>
+</div></div></div>
+  <div class="v82-table"><span class="v82-keyboard"></span><span class="v82-mug">PKJ.</span><span class="v82-book">NOTES<br><small>patterns / ideas</small></span></div>
+ </div>
+ <div class="v82-desk-notes">
+  <article data-code="inspect(system); question(assumptions);"><b>01</b><h3>Cybersecurity</h3><p>I return to security because systems become more interesting when I ask what they trust, what they expose and what could go wrong.</p></article>
+  <article data-code="prompt(); iterate(); verify();"><b>02</b><h3>Artificial Intelligence</h3><p>AI feels less like a shortcut and more like a new interface for curiosity — useful when prompting is followed by judgment and verification.</p></article>
+  <article data-code="observe(data); find(pattern);"><b>03</b><h3>Data & Analysis</h3><p>Patterns calm chaos. I like turning scattered information into something I can inspect, compare and reason about.</p></article>
+  <article data-code="idea → browser → interaction"><b>04</b><h3>Web & Digital</h3><p>The web gives ideas a surface. I enjoy the moment when code stops being text and starts becoming an experience someone can actually feel.</p></article>
+ </div>
+</div>
+</section>
+<section class="v82-thoughts" id="thoughts">
+<div class="v82-thought-head"><span>03 / THOUGHTS I KEEP CLOSE</span><h2>Ideas worth<br>returning to.</h2><p>Not commandments. Just thoughts that have stayed in my head long enough to influence how I learn and build.</p></div>
+<div class="v82-thought-list">
+ <article><em>001.</em><h3>STAY HUNGRY. STAY FOOLISH.</h3><figure><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Steve_Jobs.jpg?width=700" alt="Steve Jobs"><figcaption>STEVE JOBS // 1955–2011</figcaption></figure></article>
+ <article><em>002.</em><h3>IMAGINATION IS MORE IMPORTANT THAN KNOWLEDGE.</h3><figure><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Albert_Einstein_Head.jpg?width=700" alt="Albert Einstein"><figcaption>ALBERT EINSTEIN // 1879–1955</figcaption></figure></article>
+ <article><em>003.</em><h3>IMPOSSIBLE IS A WORD FOUND ONLY IN THE DICTIONARY OF FOOLS.</h3><figure><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Napoleon_Bonaparte_as_First_Consul.jpg?width=700" alt="Napoleon Bonaparte"><figcaption>NAPOLEON BONAPARTE // 1769–1821</figcaption></figure></article>
+ <article><em>004.</em><h3>LEARN DEEPLY. BUILD PATIENTLY.</h3><figure class="v82-self-card"><div>PKJ.</div><figcaption>MY OWN REMINDER // NOW</figcaption></figure></article>
+ <article><em>005.</em><h3>CURIOSITY SHOULD LEAVE EVIDENCE.</h3><figure class="v82-self-card"><div>PKJ.</div><figcaption>A PERSONAL PRINCIPLE // NOW</figcaption></figure></article>
+</div>
+</section>
+<section class="v82-velocity">
+<canvas id="v82Stars"></canvas>
+<div class="v82-velocity-core"><small>BEFORE KNOWING</small><h2>CURIOUS<br><span>AFTER BUILDING</span></h2></div>
+<article class="v82-float-card c1"><b>QUESTION MORE.</b><p>I don't want to collect answers without understanding the problem that made the answer useful.</p></article>
+<article class="v82-float-card c2"><b>BUILD SMALL.</b><p>Experiments make knowledge visible. A small working thing teaches me more than a perfect idea waiting forever.</p></article>
+<article class="v82-float-card c3"><b>RETURN BETTER.</b><p>I like revisiting old work because improvement is easiest to see when yesterday's decisions are still visible.</p></article>
+</section><section class="section mindset-v3" id="mindset">
 <div class="section-tag">03 / HOW MY MIND WORKS</div>
 <div class="section-head"><h2>Strategy. Patterns.<br><span>Pressure. Repeat.</span></h2><p>Technology is only one side of me. I also enjoy challenges that reward patience, observation and thinking ahead.</p></div>
 <div class="mind-grid-v3">
@@ -29,21 +216,102 @@
 </div></section>
 <section class="section builds" id="builds"><div class="section-tag">04 / THINGS I'VE BUILT</div><div class="section-head"><h2>Learning by<br><span>making things.</span></h2><p>Past experiments. Some source files were lost after a PC reset, so I document them without fake demos or repositories.</p></div><div class="build-grid"><article class="build featured"><span class="project-no">01</span><div><p class="label">AUTOMATION · DISCORD</p><h3>Voice Welcome Bot</h3><p>A Discord automation experiment designed to welcome members when they join a voice channel. Built while exploring bots, events and community automation.</p><div class="chips"><span>Discord</span><span>Automation</span><span>Bot Logic</span></div></div><em>PAST EXPERIMENT · SOURCE LOST</em></article><article class="build"><span class="project-no">02</span><p class="label">WEB EXPERIENCE</p><h3>Dynamic Birthday Wish</h3><p>An interactive birthday experience built to turn a normal greeting into a more engaging web moment.</p><div class="chips"><span>Web</span><span>Interactive</span></div><em>PAST EXPERIMENT · SOURCE LOST</em></article><article class="build"><span class="project-no">03</span><p class="label">GAME DEVELOPMENT</p><h3>Car Racing Game</h3><p>A racing game application created while exploring movement, gameplay logic and interactive development.</p><div class="chips"><span>Game Logic</span><span>Interaction</span></div><em>PAST EXPERIMENT · SOURCE LOST</em></article><article class="build"><span class="project-no">04</span><p class="label">FRONTEND</p><h3>Web Experiments</h3><p>Static websites and smaller HTML/CSS experiments created while learning frontend structure and visual design.</p><div class="chips"><span>HTML</span><span>CSS</span></div><em>ARCHIVED LEARNING WORK</em></article></div></section>
 <section class="section credentials" id="credentials"><div class="section-tag">05 / PROOF OF LEARNING</div><div class="section-head"><h2>Credentials are proof<br><span>of the path—not the finish.</span></h2><p>Selected practical simulations and learning programs.</p></div><div class="credential-grid" id="credentialGrid"></div><button class="showmore" id="showmore">Show all credentials ↓</button></section>
-<section class="section education"><div class="section-tag">06 / EDUCATION & SKILLS</div><div class="edu-grid"><div><h2>Formal education.<br><span>Self-driven learning.</span></h2><div class="edu-card"><span>UPCOMING</span><h3>B.Tech — Computer Science & Engineering</h3><p>College to be decided · Preparing for the next chapter</p></div><div class="edu-card"><span>CLASS XII · BBOSE</span><h3>Senior Secondary</h3><b>79.4%</b></div><div class="edu-card"><span>CLASS X · CBSE</span><h3>Secondary Education</h3><b>84.4%</b></div></div><div class="skill-panel"><h3>Working knowledge & exposure</h3><div class="skill-cloud"><button class="skill-chip" data-skill="Cybersecurity">Cybersecurity</button><button class="skill-chip" data-skill="Ethical Hacking">Ethical Hacking</button><button class="skill-chip" data-skill="IAM">IAM</button><button class="skill-chip" data-skill="Prompt Engineering">Prompt Engineering</button><button class="skill-chip" data-skill="ChatGPT">ChatGPT</button><button class="skill-chip" data-skill="AI Tools">AI Tools</button><button class="skill-chip" data-skill="Data Analytics">Data Analytics</button><button class="skill-chip" data-skill="HTML">HTML</button><button class="skill-chip" data-skill="CSS">CSS</button><button class="skill-chip" data-skill="Java">Java</button><button class="skill-chip" data-skill="Digital Marketing">Digital Marketing</button><button class="skill-chip" data-skill="Meta Ads">Meta Ads</button><button class="skill-chip" data-skill="Instagram Marketing">Instagram Marketing</button><button class="skill-chip" data-skill="Computer Systems">Computer Systems</button></div><div class="language"><p>English</p><div><i style="width:82%"></i></div><small>Strong reading, listening & writing · speaking improving</small></div></div></div></section>
-<section class="section beyond"><div class="section-tag">07 / BEYOND THE SCREEN</div><div class="quote">“Fantasy worlds taught me to imagine.<br><span>Technology gave me a place to experiment.</span>”</div><p>Gaming, anime-inspired storytelling, fantasy worlds and emerging technology shape how I think creatively. They stay in the background of my professional identity—but they influence the way I imagine digital experiences.</p>
+<section class="section desk-resume-v7" id="resume">
+  <div class="section-tag">06 / THE RECRUITER'S DESK</div>
+  <div class="desk-intro">
+    <div><h2>Not another<br><span>download button.</span></h2></div>
+    <p>A small desk scene built around the document that carries my work forward. Move through it, inspect the resume, and open the real copy when you are ready.</p>
+  </div>
+  <div class="recruiter-desk" id="recruiterDesk">
+    <div class="desk-light"></div><div class="desk-grain"></div>
+    <div class="desk-laptop" aria-hidden="true"><div class="laptop-screen"><span>PKJ.</span><small>EXPLORE · LEARN · BUILD</small><i></i></div><div class="laptop-base"></div></div>
+    <div class="desk-coffee" aria-hidden="true"><i></i><span></span></div>
+    <div class="desk-pencil" aria-hidden="true"></div>
+    <div class="desk-notebook" aria-hidden="true"><span>NOTES</span><p>curiosity<br>→ practice<br>→ better work</p></div>
+    <button class="resume-paper" id="resumePaper" type="button" aria-label="Preview Pranav Kumar Jha resume">
+      <span class="paper-clip"></span>
+      <span class="paper-label">RESUME · 2026</span>
+      <strong>PRANAV<br>KUMAR JHA</strong>
+      <em>ASPIRING COMPUTER SCIENCE ENGINEER</em>
+      <span class="paper-rule"></span>
+      <span class="paper-lines"><i></i><i></i><i></i><i></i><i></i><i></i></span>
+      <b>OPEN RESUME ↗</b>
+    </button>
+    <div class="desk-caption"><span>MOVE YOUR CURSOR</span><i></i><span>CLICK THE RESUME</span></div>
+  </div>
+</section>
+<section class="section education"><div class="section-tag">07 / EDUCATION & SKILLS</div><div class="edu-grid"><div><h2>Formal education.<br><span>Self-driven learning.</span></h2><div class="edu-card"><span>UPCOMING</span><h3>B.Tech — Computer Science & Engineering</h3><p>College to be decided · Preparing for the next chapter</p></div><div class="edu-card"><span>CLASS XII · BBOSE</span><h3>Senior Secondary</h3><b>79.4%</b></div><div class="edu-card"><span>CLASS X · CBSE</span><h3>Secondary Education</h3><b>84.4%</b></div></div><div class="skill-panel"><h3>Working knowledge & exposure</h3><div class="skill-cloud"><button class="skill-chip" data-skill="Cybersecurity">Cybersecurity</button><button class="skill-chip" data-skill="Ethical Hacking">Ethical Hacking</button><button class="skill-chip" data-skill="IAM">IAM</button><button class="skill-chip" data-skill="Prompt Engineering">Prompt Engineering</button><button class="skill-chip" data-skill="ChatGPT">ChatGPT</button><button class="skill-chip" data-skill="AI Tools">AI Tools</button><button class="skill-chip" data-skill="Data Analytics">Data Analytics</button><button class="skill-chip" data-skill="HTML">HTML</button><button class="skill-chip" data-skill="CSS">CSS</button><button class="skill-chip" data-skill="Java">Java</button><button class="skill-chip" data-skill="Digital Marketing">Digital Marketing</button><button class="skill-chip" data-skill="Meta Ads">Meta Ads</button><button class="skill-chip" data-skill="Instagram Marketing">Instagram Marketing</button><button class="skill-chip" data-skill="Computer Systems">Computer Systems</button></div><div class="language"><p>English</p><div><i style="width:82%"></i></div><small>Strong reading, listening & writing · speaking improving</small></div></div></div></section>
+<section class="section beyond"><div class="section-tag">08 / BEYOND THE SCREEN</div><div class="quote">“Fantasy worlds taught me to imagine.<br><span>Technology gave me a place to experiment.</span>”</div><p>Gaming, anime-inspired storytelling, fantasy worlds and emerging technology shape how I think creatively. They stay in the background of my professional identity—but they influence the way I imagine digital experiences.</p>
 <div class="four-years"><span>THE NEXT CHAPTER</span><h3>FOUR YEARS<br><em>TO GET BETTER.</em></h3><p>I am entering Computer Science at the beginning of the journey. The goal is simple: build deeper skills, create stronger projects, document the work and become better than the version of me shown here today.</p><div class="year-track"><i></i><b>NOW</b><b>LEARN</b><b>BUILD</b><b>IMPROVE</b><b>CAREER</b></div></div></section>
 <section class="section universe-v3" id="skill-universe">
-<div class="section-tag">08 / DRAG MY SKILL UNIVERSE</div>
+<div class="section-tag">09 / DRAG MY SKILL UNIVERSE</div>
 <div class="universe-grid"><div class="universe-copy"><h2>Still learning.<br><span>Still expanding.</span></h2><p>These are fields, tools and mental skills I have explored so far. Drag the sphere, throw it, and watch the universe keep moving.</p><small>DRAG · TOUCH · THROW</small></div><div class="sphere-v3"><canvas id="skillSphere" aria-label="Interactive skill universe"></canvas><div class="sphere-center">PKJ</div></div></div>
 </section>
-<section class="section contact" id="contact"><div><div class="section-tag">09 / CONTACT</div><h2>Have an idea,<br>opportunity or<br><span>something to build?</span></h2><a class="mail" href="mailto:jhaarunakumari772@gmail.com">jhaarunakumari772@gmail.com ↗</a><div class="socials"><a href="https://github.com/pranavkashyap-22" target="_blank">GitHub ↗</a><a href="https://www.linkedin.com/in/pranav-k-a853a4385" target="_blank">LinkedIn ↗</a><a href="https://www.instagram.com/pranav_kashyap22" target="_blank">Instagram ↗</a></div></div>
+
+<section class="v90-stack" id="tech-stack">
+  <div class="v90-stack-kicker">10 / TECH STACK</div>
+  <h2>TECH <span>STACK</span></h2>
+  <p>TOOLS, SYSTEMS & FIELDS CURRENTLY IN MY ORBIT.</p>
+  <div class="v101-signal-bg" aria-hidden="true"><div class="v101-aurora"></div><div class="v101-gridfield"></div><div class="v101-streaks"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+<div class="v90-stack-stage"><div class="v90-stack-grid v101-pyramid v102-pyramid"><div class="v102-tech-row row-1"><a class="v90-tech" href="https://www.python.org/" target="_blank" rel="noopener noreferrer" aria-label="Open Python website"><span>PY</span><b>Python</b><i>↗</i></a><a class="v90-tech" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer" aria-label="Open JavaScript website"><span>JS</span><b>JavaScript</b><i>↗</i></a><a class="v90-tech" href="https://www.typescriptlang.org/" target="_blank" rel="noopener noreferrer" aria-label="Open TypeScript website"><span>TS</span><b>TypeScript</b><i>↗</i></a><a class="v90-tech" href="https://en.cppreference.com/w/c" target="_blank" rel="noopener noreferrer" aria-label="Open C website"><span>C</span><b>C</b><i>↗</i></a><a class="v90-tech" href="https://isocpp.org/" target="_blank" rel="noopener noreferrer" aria-label="Open C++ website"><span>C++</span><b>C++</b><i>↗</i></a><a class="v90-tech" href="https://kotlinlang.org/" target="_blank" rel="noopener noreferrer" aria-label="Open Kotlin website"><span>KT</span><b>Kotlin</b><i>↗</i></a><a class="v90-tech" href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener noreferrer" aria-label="Open HTML website"><span>H5</span><b>HTML</b><i>↗</i></a><a class="v90-tech" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noopener noreferrer" aria-label="Open CSS website"><span>C3</span><b>CSS</b><i>↗</i></a></div><div class="v102-tech-row row-2"><a class="v90-tech" href="https://www.gnu.org/software/bash/" target="_blank" rel="noopener noreferrer" aria-label="Open Bash website"><span>BS</span><b>Bash</b><i>↗</i></a><a class="v90-tech" href="https://react.dev/" target="_blank" rel="noopener noreferrer" aria-label="Open React website"><span>RE</span><b>React</b><i>↗</i></a><a class="v90-tech" href="https://nextjs.org/" target="_blank" rel="noopener noreferrer" aria-label="Open Next.js website"><span>NX</span><b>Next.js</b><i>↗</i></a><a class="v90-tech" href="https://getbootstrap.com/" target="_blank" rel="noopener noreferrer" aria-label="Open Bootstrap website"><span>BT</span><b>Bootstrap</b><i>↗</i></a><a class="v90-tech" href="https://nodejs.org/" target="_blank" rel="noopener noreferrer" aria-label="Open Node.js website"><span>ND</span><b>Node.js</b><i>↗</i></a><a class="v90-tech" href="https://www.djangoproject.com/" target="_blank" rel="noopener noreferrer" aria-label="Open Django website"><span>DJ</span><b>Django</b><i>↗</i></a><a class="v90-tech" href="https://flask.palletsprojects.com/" target="_blank" rel="noopener noreferrer" aria-label="Open Flask website"><span>FL</span><b>Flask</b><i>↗</i></a><a class="v90-tech" href="https://fastapi.tiangolo.com/" target="_blank" rel="noopener noreferrer" aria-label="Open FastAPI website"><span>FA</span><b>FastAPI</b><i>↗</i></a><a class="v90-tech" href="https://www.tensorflow.org/" target="_blank" rel="noopener noreferrer" aria-label="Open TensorFlow website"><span>TF</span><b>TensorFlow</b><i>↗</i></a><a class="v90-tech" href="https://pytorch.org/" target="_blank" rel="noopener noreferrer" aria-label="Open PyTorch website"><span>PT</span><b>PyTorch</b><i>↗</i></a></div><div class="v102-tech-row row-3"><a class="v90-tech" href="https://scikit-learn.org/" target="_blank" rel="noopener noreferrer" aria-label="Open Scikit-learn website"><span>SK</span><b>Scikit-learn</b><i>↗</i></a><a class="v90-tech" href="https://opencv.org/" target="_blank" rel="noopener noreferrer" aria-label="Open OpenCV website"><span>CV</span><b>OpenCV</b><i>↗</i></a><a class="v90-tech" href="https://numpy.org/" target="_blank" rel="noopener noreferrer" aria-label="Open NumPy website"><span>NP</span><b>NumPy</b><i>↗</i></a><a class="v90-tech" href="https://pandas.pydata.org/" target="_blank" rel="noopener noreferrer" aria-label="Open Pandas website"><span>PD</span><b>Pandas</b><i>↗</i></a><a class="v90-tech" href="https://www.mysql.com/" target="_blank" rel="noopener noreferrer" aria-label="Open MySQL website"><span>MY</span><b>MySQL</b><i>↗</i></a><a class="v90-tech" href="https://www.postgresql.org/" target="_blank" rel="noopener noreferrer" aria-label="Open PostgreSQL website"><span>PG</span><b>PostgreSQL</b><i>↗</i></a><a class="v90-tech" href="https://www.mongodb.com/" target="_blank" rel="noopener noreferrer" aria-label="Open MongoDB website"><span>MG</span><b>MongoDB</b><i>↗</i></a><a class="v90-tech" href="https://firebase.google.com/" target="_blank" rel="noopener noreferrer" aria-label="Open Firebase website"><span>FB</span><b>Firebase</b><i>↗</i></a><a class="v90-tech" href="https://www.docker.com/" target="_blank" rel="noopener noreferrer" aria-label="Open Docker website"><span>DK</span><b>Docker</b><i>↗</i></a></div><div class="v102-tech-row row-4"><a class="v90-tech" href="https://azure.microsoft.com/" target="_blank" rel="noopener noreferrer" aria-label="Open Azure website"><span>AZ</span><b>Azure</b><i>↗</i></a><a class="v90-tech" href="https://git-scm.com/" target="_blank" rel="noopener noreferrer" aria-label="Open Git website"><span>GT</span><b>Git</b><i>↗</i></a><a class="v90-tech" href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="Open GitHub website"><span>GH</span><b>GitHub</b><i>↗</i></a><a class="v90-tech" href="https://www.linux.org/" target="_blank" rel="noopener noreferrer" aria-label="Open Linux website"><span>LX</span><b>Linux</b><i>↗</i></a><a class="v90-tech" href="https://aws.amazon.com/" target="_blank" rel="noopener noreferrer" aria-label="Open AWS website"><span>AWS</span><b>AWS</b><i>↗</i></a><a class="v90-tech" href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer" aria-label="Open VS Code website"><span>VS</span><b>VS Code</b><i>↗</i></a><a class="v90-tech" href="https://vercel.com/" target="_blank" rel="noopener noreferrer" aria-label="Open Vercel website"><span>VC</span><b>Vercel</b><i>↗</i></a></div><div class="v102-tech-row row-5"><a class="v90-tech" href="https://jupyter.org/" target="_blank" rel="noopener noreferrer" aria-label="Open Jupyter website"><span>JP</span><b>Jupyter</b><i>↗</i></a><a class="v90-tech" href="https://www.figma.com/" target="_blank" rel="noopener noreferrer" aria-label="Open Figma website"><span>FG</span><b>Figma</b><i>↗</i></a><a class="v90-tech" href="https://www.postman.com/" target="_blank" rel="noopener noreferrer" aria-label="Open Postman website"><span>PM</span><b>Postman</b><i>↗</i></a><a class="v90-tech" href="https://www.adobe.com/products/photoshop.html" target="_blank" rel="noopener noreferrer" aria-label="Open Photoshop website"><span>PS</span><b>Photoshop</b><i>↗</i></a></div><div class="v102-tech-row row-6"><a class="v90-tech" href="https://huggingface.co/" target="_blank" rel="noopener noreferrer" aria-label="Open Hugging Face website"><span>HF</span><b>Hugging Face</b><i>↗</i></a><a class="v90-tech" href="https://www.microsoft.com/microsoft-365" target="_blank" rel="noopener noreferrer" aria-label="Open MS Office website"><span>OF</span><b>MS Office</b><i>↗</i></a></div></div></div>
+</section>
+<section class="section v8-play" id="play">
+  <div class="section-tag">11 / PLAY WITH ME</div>
+  <div class="v8-play-head">
+    <h2 class="v8-letter-react">Strategy is<br><span>personal.</span></h2>
+    <p class="v8-letter-react">Chess is one of the ways I slow down, read a position and commit to a decision. This is not a puzzle. Play against the portfolio itself. You are White; the themed computer opponent reads the board and answers as Black.</p>
+  </div>
+  <div class="v8-chess-shell">
+    <div class="v8-chess-panel">
+      <span class="v8-eyebrow">PKJ CHESS // VS FLUID AI</span>
+      <strong id="v8Turn">WHITE TO MOVE</strong>
+      <p id="v8ChessStatus">Select a piece. Legal destinations will light up.</p>
+      <div class="v8-captured"><label>CAPTURED</label><div id="v8Captured"></div></div>
+      <div class="v10-side-picker"><label>PLAY AS</label><div><button id="v10White" class="active" type="button">WHITE</button><button id="v10Black" type="button">BLACK</button></div></div>
+<div class="v8-chess-actions"><button id="v8Undo" type="button">UNDO</button><button id="v8Reset" type="button">NEW GAME</button></div>
+      <div class="v8-moves" id="v8Moves"></div>
+    </div>
+    <div class="v8-board-wrap"><div class="v8-board-glow"></div><div class="v8-board" id="v8Board" aria-label="Interactive chess board"></div></div>
+  </div>
+<div class="v90-ai-box">
+  <div class="v90-ai-top"><span><i></i> PKJ PORTFOLIO AI</span><b>LOCAL KNOWLEDGE MODE</b></div>
+  <div class="v90-ai-log" id="v90AiLog">
+    <div class="v90-ai-msg bot">Ask me about Pranav's skills, education, projects, cybersecurity, AI, contact details, resume, interests or this portfolio.</div>
+  </div>
+  <form class="v90-ai-form" id="v90AiForm">
+    <input id="v90AiInput" autocomplete="off" placeholder="Ask something about Pranav..." aria-label="Ask portfolio assistant">
+    <button type="submit">SEND ↗</button>
+  </form>
+  <small>PORTFOLIO KNOWLEDGE ASSISTANT · INSTANT · NO NETWORK DELAY</small>
+</div>
+
+</section><section class="section contact" id="contact"><div><div class="section-tag">12 / CONTACT</div><h2>Have an idea,<br>opportunity or<br><span>something to build?</span></h2><a class="mail" href="mailto:jhaarunakumari772@gmail.com">jhaarunakumari772@gmail.com ↗</a><div class="socials"><a href="https://github.com/pranavkashyap-22" target="_blank">GitHub ↗</a><a href="https://www.linkedin.com/in/pranav-k-a853a4385" target="_blank">LinkedIn ↗</a><a href="https://www.instagram.com/pranav_kashyap22" target="_blank">Instagram ↗</a></div></div>
 <div class="contact-links reveal">
 <a href="mailto:jhaarunakumari772@gmail.com"><span>EMAIL</span><b>jhaarunakumari772@gmail.com</b><i>↗</i></a>
 <a href="https://www.linkedin.com/in/pranav-k-a853a4385" target="_blank" rel="noopener"><span>LINKEDIN</span><b>Connect professionally</b><i>↗</i></a>
 <a href="https://github.com/pranavkashyap-22" target="_blank" rel="noopener"><span>GITHUB</span><b>Explore my repositories</b><i>↗</i></a>
 <a href="assets/Pranav_Kumar_Jha_Resume.pdf" target="_blank" rel="noopener"><span>RESUME</span><b>View professional resume</b><i>↗</i></a>
 </div>
-<button class="qr qr-trigger" id="qrTrigger" aria-label="Open Instagram QR code"><img src="assets/instagram-qr.png" alt="Instagram QR code"><p>TAP TO OPEN INSTAGRAM QR</p></button></section>
+<button class="qr qr-trigger" id="qrTrigger" aria-label="Open Instagram QR code"><img src="assets/instagram-qr.png" alt="Instagram QR code"><p>TAP TO OPEN INSTAGRAM QR</p></button>
+<div class="signal-constellation" aria-label="Interactive digital identity orbit">
+  <div class="signal-grid"></div>
+  <div class="signal-status">IDENTITY SIGNAL / LIVE</div>
+  <div class="signal-orbit signal-orbit-a"></div>
+  <div class="signal-orbit signal-orbit-b"></div>
+  <div class="signal-orbit signal-orbit-c"></div>
+  <div class="signal-link signal-link-1"></div>
+  <div class="signal-link signal-link-2"></div>
+  <button class="signal-core" type="button" aria-label="Pranav signal core">
+    <span class="signal-core-pulse"></span><span class="signal-core-text">PKJ.</span>
+  </button>
+  <div class="signal-node signal-code" data-thought="I turn thought into logic."><b>CODE</b><span>01</span></div>
+  <div class="signal-node signal-ai" data-thought="I explore intelligence."><b>AI</b><span>02</span></div>
+  <div class="signal-node signal-cyber" data-thought="I question systems."><b>CYBER</b><span>03</span></div>
+  <div class="signal-node signal-build" data-thought="Ideas deserve execution."><b>BUILD</b><span>04</span></div>
+  <div class="signal-thought" aria-live="polite"><span>MOVE THROUGH THE SIGNAL</span></div>
+  <div class="signal-reveal"><strong>SIGNAL FOUND.</strong><span>PRANAV IS OPEN TO BUILDING<br>SOMETHING INTERESTING.</span></div>
+</div>
+</section>
 </main>
 <footer><div class="resume-updated">RESUME LAST UPDATED · JULY 2026</div><a class="mark" href="#home">PKJ<span>.</span></a><p>Designed around curiosity. Built for what's next.</p><span>© <span id="year"></span> PRANAV KUMAR JHA</span></footer>
 <div class="modal" id="modal"><button id="close" aria-label="Close">×</button><iframe id="certFrame" title="Certificate viewer"></iframe></div>
@@ -59,8 +327,33 @@
     <div class="info-line"></div>
   </div>
 </div>
+<div class="desk-resume-modal" id="deskResumeModal" aria-hidden="true">
+  <div class="desk-resume-viewer" role="dialog" aria-modal="true" aria-label="Resume preview">
+    <button class="desk-resume-close" type="button" aria-label="Close resume preview">×</button>
+    <div class="viewer-top"><span>PRANAV KUMAR JHA · RESUME</span><div><a href="assets/Pranav_Kumar_Jha_Resume.pdf" target="_blank" rel="noopener">OPEN PDF ↗</a><a href="assets/Pranav_Kumar_Jha_Resume.pdf" download>DOWNLOAD ↓</a></div></div>
+    <iframe src="assets/Pranav_Kumar_Jha_Resume.pdf#view=FitH" title="Pranav Kumar Jha resume"></iframe>
+  </div>
+</div>
 <div class="info-modal qr-modal" id="qrModal" aria-hidden="true"><div class="qr-pop-card"><button class="info-close" aria-label="Close">×</button><img src="assets/instagram-qr.png" alt="Instagram QR code"><h3>@PRANAV_KASHYAP22</h3><p>SCAN TO CONNECT ON INSTAGRAM</p></div></div>
 
+
+<div class="v90-hire-modal" id="v90HireModal" aria-hidden="true">
+ <div class="v90-hire-card" role="dialog" aria-modal="true" aria-label="Hire Pranav">
+  <button class="v90-hire-close" type="button" aria-label="Close">×</button>
+  <form class="v90-hire-form" id="v90HireForm">
+   <span>DIRECT SIGNAL / OPPORTUNITY</span>
+   <h2>HAVE A PROBLEM?<br><em>LET'S INSPECT IT.</em></h2>
+   <div class="v90-name-row"><input name="first" placeholder="FIRST NAME" required><input name="last" placeholder="LAST NAME"></div>
+   <input name="email" type="email" placeholder="WORK E-MAIL" required>
+   <textarea name="message" placeholder="TELL ME WHAT YOU WANT TO BUILD..." required></textarea>
+   <button type="submit">SEND SIGNAL ↗</button><small id="v90HireNote">OPENS YOUR MAIL APP WITH THE MESSAGE READY.</small>
+  </form>
+  <div class="v90-hire-art">
+   <div class="v90-art-grid"></div><div class="v90-sentinel"><i></i><b>PKJ</b><span></span></div>
+   <div class="v90-art-card"><strong>THE SIGNAL KEEPER</strong><span>ORIGINAL DIGITAL STUDY</span><p>CYBER / AI / BUILD</p></div>
+  </div>
+ </div>
+</div>
 <div class="site-loader" id="siteLoader">
   <div class="pkj-loader-scene" aria-hidden="true">
     <div class="loader-particles"><b></b><b></b><b></b><b></b><b></b><b></b></div>
